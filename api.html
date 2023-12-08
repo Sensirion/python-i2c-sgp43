@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation &mdash; sensirion_i2c_sgp43 0.2.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Build documentation" href="build-documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sensirion_i2c_sgp43
+          </a>
+              <div class="version">
+                0.2.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sgp43">SGP43</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sgp43.device">Sgp43Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sgp43.commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sgp43.result_types">Result Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sensirion_i2c_sgp43</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline"></a></h1>
+<section id="sgp43">
+<h2>SGP43<a class="headerlink" href="#sgp43" title="Permalink to this headline"></a></h2>
+<section id="module-sensirion_i2c_sgp43.device">
+<span id="sgp43device"></span><h3>Sgp43Device<a class="headerlink" href="#module-sensirion_i2c_sgp43.device" title="Permalink to this headline"></a></h3>
+<p>The class Sgp43DeviceBase implements the low level interface of the sensor.
+The class Sgp43Device extends the Sgp43DeviceBase. It provides additional functions to ease the use of the
+sensor.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.device.</span></span><span class="sig-name descname"><span class="pre">Sgp43DeviceBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase" title="Permalink to this definition"></a></dt>
+<dd><p>Low level API implementation of SGP43</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.channel">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.channel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.execute_conditioning">
+<span class="sig-name descname"><span class="pre">execute_conditioning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compensation_rh_ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensation_t_ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.execute_conditioning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.execute_conditioning" title="Permalink to this definition"></a></dt>
+<dd><p>This command starts the conditioning, i.e., the VOC pixel will be operated at
+the same temperature as it is by calling the sgp41_measure_raw command while the
+NOx pixel will be operated at a different temperature for conditioning. This
+command returns only the measured raw signal of the VOC pixel SRAW_VOC as 2
+bytes (+ 1 CRC byte).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compensation_rh_ticks</strong> – Compensation value for relative humidty in ticks.
+tick = %RH * 65535 / 100</p></li>
+<li><p><strong>compensation_t_ticks</strong> – Compensation value for temperature in ticks.
+tick = (temperature + 45) * 65535 / 175</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return sraw_voc</dt>
+<dd class="field-even"><p>u16 unsigned integer directly provides the raw signal SRAW_VOC in ticks which is
+proportional to the logarithm of the resistance of the sensing element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.measure_set_multipixel_ticks">
+<span class="sig-name descname"><span class="pre">measure_set_multipixel_ticks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_humidity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.measure_set_multipixel_ticks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.measure_set_multipixel_ticks" title="Permalink to this definition"></a></dt>
+<dd><p>This performs a multipixel measurement and then sets the hotplate temperatures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>relative_humidity</strong> – By setting the value of relative_humidity to 0x8000 the compensation is disabled. To activate the compensation the relative humidity has to be set
+in ticks (tick = %RH * 65535 / 100).</p></li>
+<li><p><strong>temperature</strong> – By setting the value of temperature to 0x6666 the temperature compensation is disabled. To activate the compensation the temperature has to be set
+in ticks (tick = (temperature + 45) * 65535 / 175)</p></li>
+<li><p><strong>temperature_pix_1</strong> – temperature (in °C) to set on pixel 1</p></li>
+<li><p><strong>temperature_pix_2</strong> – temperature (in °C) to set on pixel 2</p></li>
+<li><p><strong>temperature_pix_3</strong> – temperature (in °C) to set on pixel 3</p></li>
+<li><p><strong>temperature_pix_4</strong> – temperature (in °C) to set on pixel 4</p></li>
+<li><p><strong>condition_pix_1</strong> – conditioning to apply on pixel 1</p></li>
+<li><p><strong>condition_pix_2</strong> – conditioning to apply on pixel 2</p></li>
+<li><p><strong>condition_pix_3</strong> – conditioning to apply on pixel 3</p></li>
+<li><p><strong>condition_pix_4</strong> – conditioning to apply on pixel 4</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return raw_signal_pix1</dt>
+<dd class="field-even"><p>measured raw signal of pixel 1</p>
+</dd>
+<dt class="field-odd">Return raw_signal_pix2</dt>
+<dd class="field-odd"><p>measured raw signal of pixel 2</p>
+</dd>
+<dt class="field-even">Return raw_signal_pix3</dt>
+<dd class="field-even"><p>measured raw signal of pixel 3</p>
+</dd>
+<dt class="field-odd">Return raw_signal_pix4</dt>
+<dd class="field-odd"><p>measured raw signal of pixel 4</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.measure_raw_signals">
+<span class="sig-name descname"><span class="pre">measure_raw_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_humidity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.measure_raw_signals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.measure_raw_signals" title="Permalink to this definition"></a></dt>
+<dd><p>This command starts/continues the VOC+NOx measurement mode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>relative_humidity</strong> – Leaves humidity compensation disabled by sending the default value 0x8000
+(50%RH) or enables humidity compensation when sending the relative humidity in
+ticks (ticks = %RH * 65535 / 100)</p></li>
+<li><p><strong>temperature</strong> – Leaves humidity compensation disabled by sending the default value 0x6666 (25
+degC) or enables humidity compensation when sending the temperature in ticks
+(ticks = (degC + 45) * 65535 / 175)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return sraw_voc</dt>
+<dd class="field-even"><p>u16 unsigned integer directly provides the raw signal SRAW_VOC in ticks which is
+proportional to the logarithm of the resistance of the sensing element.</p>
+</dd>
+<dt class="field-odd">Return sraw_nox</dt>
+<dd class="field-odd"><p>u16 unsigned integer directly provides the raw signal SRAW_NOX in ticks which is
+proportional to the logarithm of the resistance of the sensing element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.execute_self_test">
+<span class="sig-name descname"><span class="pre">execute_self_test</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.execute_self_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.execute_self_test" title="Permalink to this definition"></a></dt>
+<dd><p>This command triggers the built-in self-test checking for integrity of both
+hotplate and MOX material and returns the result of this test as 2 bytes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return test_result</dt>
+<dd class="field-odd"><p>0xXX 0xYY: ignore most significant byte 0xXX. The four least significant bits of
+the least significant byte 0xYY provide information if the self-test has or has
+not passed for each individual pixel. All zero mean all tests passed
+successfully. Check the datasheet for more detailed information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.turn_heater_off">
+<span class="sig-name descname"><span class="pre">turn_heater_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.turn_heater_off"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.turn_heater_off" title="Permalink to this definition"></a></dt>
+<dd><p>This command turns the hotplate off and stops the measurement. Subsequently, the
+sensor enters the idle mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43DeviceBase.get_serial_number">
+<span class="sig-name descname"><span class="pre">get_serial_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43DeviceBase.get_serial_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43DeviceBase.get_serial_number" title="Permalink to this definition"></a></dt>
+<dd><p>This command provides the decimal serial number of the SGP41 chip by returning
+3x2 bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return serial_number</dt>
+<dd class="field-odd"><p>48-bit unique serial number</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43Device">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.device.</span></span><span class="sig-name descname"><span class="pre">Sgp43Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43Device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43Device" title="Permalink to this definition"></a></dt>
+<dd><p>Driver class implementation of SGP43</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43Device.sgp43">
+<span class="sig-name descname"><span class="pre">sgp43</span></span><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43Device.sgp43" title="Permalink to this definition"></a></dt>
+<dd><p>Access to base class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43Device.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43Device.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43Device.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.device.Sgp43Device.measure_set_multipixel_temperature">
+<span class="sig-name descname"><span class="pre">measure_set_multipixel_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temp_pixel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/device.html#Sgp43Device.measure_set_multipixel_temperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.device.Sgp43Device.measure_set_multipixel_temperature" title="Permalink to this definition"></a></dt>
+<dd><p>One temperature is applied on all pixels. Compensation of temperature and relative humidity is turned off.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temp_pixel</strong> – Target temperature for the pixels.</p>
+</dd>
+<dt class="field-even">Return a_sraw</dt>
+<dd class="field-even"><p>Raw measurement of one pixel</p>
+</dd>
+<dt class="field-odd">Return a_sraw_1</dt>
+<dd class="field-odd"><p>Raw measurement of one pixel</p>
+</dd>
+<dt class="field-even">Return a_sraw_2</dt>
+<dd class="field-even"><p>Raw measurement of one pixel</p>
+</dd>
+<dt class="field-odd">Return a_sraw_3</dt>
+<dd class="field-odd"><p>Raw measurement of one pixel</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sensirion_i2c_sgp43.commands">
+<span id="commands"></span><h3>Commands<a class="headerlink" href="#module-sensirion_i2c_sgp43.commands" title="Permalink to this headline"></a></h3>
+<p>The transfer classes specify the data that is transferred between host and sensor. The generated transfer classes
+are used by the driver class and not intended for direct use.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteConditioning">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.commands.</span></span><span class="sig-name descname"><span class="pre">ExecuteConditioning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compensation_rh_ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensation_t_ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#ExecuteConditioning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteConditioning" title="Permalink to this definition"></a></dt>
+<dd><p>This command starts the conditioning, i.e., the VOC pixel will be operated at
+the same temperature as it is by calling the sgp41_measure_raw command while the
+NOx pixel will be operated at a different temperature for conditioning. This
+command returns only the measured raw signal of the VOC pixel SRAW_VOC as 2
+bytes (+ 1 CRC byte).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteConditioning.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9746</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteConditioning.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteConditioning.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#ExecuteConditioning.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteConditioning.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteConditioning.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteConditioning.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteConditioning.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteConditioning.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureSetMultipixelTicks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_humidity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature_pix_4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition_pix_4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#MeasureSetMultipixelTicks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks" title="Permalink to this definition"></a></dt>
+<dd><p>This performs a multipixel measurement and then sets the hotplate temperatures.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9790</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#MeasureSetMultipixelTicks.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureSetMultipixelTicks.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureRawSignals">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.commands.</span></span><span class="sig-name descname"><span class="pre">MeasureRawSignals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_humidity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#MeasureRawSignals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureRawSignals" title="Permalink to this definition"></a></dt>
+<dd><p>This command starts/continues the VOC+NOx measurement mode</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureRawSignals.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9753</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureRawSignals.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureRawSignals.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#MeasureRawSignals.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureRawSignals.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureRawSignals.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureRawSignals.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.MeasureRawSignals.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.MeasureRawSignals.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteSelfTest">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.commands.</span></span><span class="sig-name descname"><span class="pre">ExecuteSelfTest</span></span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#ExecuteSelfTest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteSelfTest" title="Permalink to this definition"></a></dt>
+<dd><p>This command triggers the built-in self-test checking for integrity of both
+hotplate and MOX material and returns the result of this test as 2 bytes</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteSelfTest.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10254</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteSelfTest.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteSelfTest.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#ExecuteSelfTest.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteSelfTest.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteSelfTest.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteSelfTest.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.ExecuteSelfTest.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.ExecuteSelfTest.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.TurnHeaterOff">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.commands.</span></span><span class="sig-name descname"><span class="pre">TurnHeaterOff</span></span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#TurnHeaterOff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.TurnHeaterOff" title="Permalink to this definition"></a></dt>
+<dd><p>This command turns the hotplate off and stops the measurement. Subsequently, the
+sensor enters the idle mode.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.TurnHeaterOff.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13845</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.TurnHeaterOff.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.TurnHeaterOff.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#TurnHeaterOff.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.TurnHeaterOff.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.TurnHeaterOff.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.TurnHeaterOff.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.GetSerialNumber">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.commands.</span></span><span class="sig-name descname"><span class="pre">GetSerialNumber</span></span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#GetSerialNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.GetSerialNumber" title="Permalink to this definition"></a></dt>
+<dd><p>This command provides the decimal serial number of the SGP41 chip by returning
+3x2 bytes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.GetSerialNumber.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13954</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.GetSerialNumber.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.GetSerialNumber.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/commands.html#GetSerialNumber.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.commands.GetSerialNumber.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.GetSerialNumber.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.GetSerialNumber.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.commands.GetSerialNumber.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sgp43.commands.GetSerialNumber.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sensirion_i2c_sgp43.result_types">
+<span id="result-types"></span><h3>Result Types<a class="headerlink" href="#module-sensirion_i2c_sgp43.result_types" title="Permalink to this headline"></a></h3>
+<p>The signal classes specify transformations of the raw sensor signals into a meaningful units.
+The generated signal types are used by the driver class and not intended for direct use.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.result_types.SignalSraw">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sgp43.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalSraw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sgp43/result_types.html#SignalSraw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sgp43.result_types.SignalSraw" title="Permalink to this definition"></a></dt>
+<dd><p>Raw measurement of one pixel</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sgp43.result_types.SignalSraw.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sgp43.result_types.SignalSraw.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="build-documentation.html" class="btn btn-neutral float-left" title="Build documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
