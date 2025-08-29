@@ -12,9 +12,9 @@ python_requires = '>=3.6, <4'
 # Packages that this package imports. List everything apart from standard lib packages.
 install_requires = [
     'sensirion-i2c-driver>=1.0.0,<2.0',
-    'sensirion-driver-adapters>=2.1.9,<3.0',
-    'sensirion-driver-support-types~=0.2.0',
-    'sensirion-shdlc-sensorbridge~=0.1.1'
+    'sensirion-driver-adapters>=2.3.0,<3.0',
+    'sensirion-driver-support-types>=1.2.0,<2.0',
+    'sensirion-shdlc-sensorbridge>=0.1.0,<0.3.0'
 ]
 
 # Packages required for tests and docs
@@ -23,12 +23,6 @@ extras_require = {
         'flake8~=3.7.8',
         'pytest~=6.2.5',
         'pytest-cov~=3.0.0',
-    ],
-    'docs': [
-        'click==8.0.4',
-        'jinja2==3.0.1',
-        'sphinx~=4.2.0',
-        'sphinx-rtd-theme~=0.5.2',
     ]
 }
 
@@ -70,6 +64,7 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.11',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ]
 )
