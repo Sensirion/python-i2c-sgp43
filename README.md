@@ -2,7 +2,7 @@
 
 This repository contains the Python driver to communicate with a Sensirion SGP43 sensor over I2C.
 
-<img src="https://raw.githubusercontent.com/Sensirion/python-i2c-sgp43/master/images/sensor_sgp41.jpg"
+<img src="https://raw.githubusercontent.com/Sensirion/python-i2c-sgp43/master/images/sensor_sgp43.png"
     width="300px" alt="SGP43 picture">
 
 
